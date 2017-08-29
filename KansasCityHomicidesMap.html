@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>kansas_city_crime_map</title>
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/KansasCityMap.css">
+
+
+</head>
+
+<body>
+  <html>
+
+<head>
+  <meta charset='utf-8' />
+  <title></title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.0.0/d3.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.min.js'></script>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
+</head>
+
+<body>
+
+  <div class="row">
+    <div class="col-sm-7">
+      <div id='title'>
+        <h1>Kansas City Homicides</br>2015-2017</h1></div>
+    </div>
+    <div class="col-sm-5">
+      <div id="legendChart">
+        <p>Number of Homicides</p><svg></svg></div>
+    </div>
+  </div>
+
+
+  <div class='map-container'>
+    <div id='map'></div>
+  </div>
+  <div class='sidebar'>
+
+
+    <div class="sidebar_one">
+      <p id="yearMenu" class="">Year<select class="form-control" id="yearSelection">
+    <option value="all">2015-2017</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+    </select>
+        <p id="ageMenu" class="">Age <select class="form-control" id="ageSelection">
+          <option value="all">All</option>
+    <option value="14">0-14</option>
+     <option value="1519">15-19</option>
+    <option value="2024">20-24</option>
+     <option value="2529">25-29</option>
+                <option value="3034">30-34</option>
+                <option value="3539">35-39</option>
+                <option value="4044">40-44</option>
+                <option value="4549">45-49</option>
+                <option value="5060">50-60</option>
+                <option value="60plus">60+</option>
+    </select>
+          <p id="raceMenu" class="">Race of Victim<select class="form-control" id="raceSelection">
+                          <option value="all">All</option>
+    <option value="B">Black</option>
+     <option value="W">White</option>
+    <option value="H">Latino</option>
+     <option value="I">Indian</option>
+<option value="A">Asian</option>
+     <option value="U">Unknown</option>
+    </select>
+            <p id="sexMenu" class="menuchoice3">Sex of Victim<select class="form-control" id="sexSelection">
+                                  <option value="all">All</option>
+    <option value="M">Male</option>
+     <option value="F">Female</option>
+    <option value="Unknown">Unknown</option>
+    </select>
+              <p id="gunMenu" class="menuchoice3">Gun Used<select class="form-control" id="gunSelection">
+                                                                  <option value="all">All</option>
+    <option value="Y">Yes</option>
+     <option value="N">No</option>
+    </select>
+                <p id="menu2" class="menuchoice2">Select series: <select class="form-control" id="sel1">
+    <option value="all">All</option>
+        <option value="3">Armour Hills</option>
+        <option value="4">Armour Fields</option>
+        <option value="81">Ashland Ridge</option>
+        ---------------
+        <option value="34">Bannister Ares</option>
+        <option value="35">Beacon Hills</option>
+        <option value="1">Bleheim Square - Research Hospital</option>
+        <option value="82">Blue Hills</option>
+        <option value="36">Blue Hills Estates</option>
+        <option value="37">Blue Valley Industrial</option>
+        <option value="38">Blue Vue Hills</option>
+        <option value="83">Bonne Hills</option>
+        <option value="0">Bridlespur</option>
+        <option value="39">Broadway Gillham</option>
+        <option value="84">Brown Estates</option>
+        ---------------
+        <option value="47">Central Blue Valley - Park Tower Grade</option>
+        <option value="2">Central Business District - Downtown</option>
+        <option value="48">Central Hyde Park</option>
+        <option value="85">Citadel</option>
+        <option value="5">Coleman Highlands</option>
+        <option value="49">Country Club Plaza</option>
+        <option value="50">Country Lane Estates</option>
+        <option value="6">Country Valley - Hawthorn Square</option>
+        <option value="51">Crown Center</option>
+        <option value="7">Cunningham Ridge</option>
+        ---------------
+        <option value="13">East Blue Valley</option>
+        <option value="52">East Community Team North</option>
+        <option value="86">East Community Team South</option>
+        <option value="55">Eastwood Hill East</option>
+        <option value="68">Eastwood Hills West</option>
+        <option value="53">East Meyer 6</option>
+        <option value="54">East Meyer 7</option>
+        <option value="115">East Sqope Highlands</option>
+        <option value="8">Eastern 49-63</option>
+        ---------------
+        <option value="69">Faireway Hills</option>
+        <option value="111">Fairlane</option>
+        <option value="74">Fairwood and Robandee</option>
+        <option value="9">Foxcroft and Glen Arbor</option>
+        <option value="10">Foxtown East</option>
+        ---------------
+        <option value="14">Greenway Fields</option>
+        ---------------
+        <option value="11">Hanover Place</option>
+        <option value="102">Hickman Mills</option>
+        <option value="112">Hickman Mills South</option>
+        <option value="12">Hidden Valley</option>
+        <option value="19">Highview Estates</option>
+        <option value="15">Hillcrest</option>
+        <option value="16">Holmes Park</option>
+        ---------------
+        <option value="75">Independence Plaza</option>
+        <option value="20">Ingleside</option>
+        <option value="118">Ivanhoe Northeast</option>
+        <option value="17">Ivanhoe Southeast</option>
+        ---------------
+        <option value="70">Key Coalition</option>
+        <option value="116">Kirkside</option>
+        <option value="18">Knoches Park</option>
+        ---------------
+        <option value="117">Lea Manor</option>
+        <option value="76">Legacy East</option>
+        <option value="21">Lewis Heights</option>
+        <option value="122">Linden Hills and Indian Heights</option>
+        <option value="123">Linwood Homeowner - Ivanhoe</option>
+        <option value="124">Little Blue Valley</option>
+        <option value="125">Loma Vista</option>
+        <option value="30">Longfellow</option>
+        <option value="22">Lykins</option>
+        ---------------
+        <option value="77">Manheim Park</option>
+        <option value="23">Marlborough East</option>
+        <option value="31">Marlborough Heights - Marlborough Pride</option>
+        <option value="126">Martin City</option>
+        <option value="24">Mission Lake</option>
+        <option value="25">Morningside</option>
+        <option value="32">Mount Hope</option>
+        ---------------
+        <option value="26">North Blue Ridge</option>
+        <option value="27">North Hyde Park</option>
+        <option value="127">North India Mound</option>
+        <option value="33">North Town Fork Creek</option>
+        <option value="78">Norble and Gregory Ridge</option>
+        <option value="87">Northeast Industrial District</option>
+        ---------------
+        <option value="145">Oak Meyer Gardens</option>
+        <option value="28">Oak Park Northwest</option>
+        <option value="128">Oak Park Southeast</option>
+        <option value="29">'Oak Park Southwest'</option>
+        <option value="119">Oakwood</option>
+        <option value="40">Old Westport</option>
+        <option value="88">Oldham Farms</option>
+        ---------------
+        <option value="103">Palestine East</option>
+        <option value="89">Palestine West and Oak Park Northeast</option>
+        <option value="129">Park Farms</option>
+        <option value="130">Pendleton Heights</option>
+        <option value="41">Plaza Westport</option>
+        ---------------
+        <option value="59">Red Bridge North</option>
+        <option value="131">Red Ridge South</option>
+        <option value="90">Richards Gebaur</option>
+        <option value="71">Riss Lake</option>
+        <option value="42">River Market</option>
+        <option value="43">Roanoke</option>
+        <option value="44">Robandee South</option>
+        <option value="132">Rolling Meadows</option>
+        <option value="45">Romanelli West</option>
+        <option value="92">Royal Oaks</option>
+        <option value="120">Ruskin Heights</option>
+        <option value="133">Ruskin Hills</option>
+        ---------------
+        <option value="46">Santa Fe</option>
+        <option value="134">Santa Fe Hills</option>
+        <option value="146">Sarritt Point</option>
+        <option value="93">Self Help Neighborhood Council</option>
+        <option value="135">Sheffield</option>
+        <option value="94">South Blue Valley</option>
+        <option value="136">South Hyde Park</option>
+        <option value="60">South India Mound</option>
+        <option value="147">South Plaza</option>
+        <option value="95">South Town Fork Creek</option>
+        <option value="61">Southmoreland</option>
+        <option value="104">Stanford Estates</option>
+        <option value="105">Stanford Gardens</option>
+        <option value="56">St. Catherine's Gardens</option>
+        <option value="137">Squier Park</option>
+        <option value="57">Stayton Meadows</option>
+        <option value="62">Sterling Acres</option>
+        <option value="63">Sunset Hill</option>
+        <option value="138">Sunset Hill West</option>
+        <option value="64">Swope Park Campus</option>
+        <option value="58">Swope Parkway - Elmwood</option>
+        ---------------
+        <option value="139">Timber Valley</option>
+        <option value="107">Tower Homes</option>
+        ---------------
+        <option value="140">Union Hill</option>
+        <option value="96">Unity Ridge</option>
+        ---------------
+        <option value="141">Valentine</option>
+        <option value="72">Verona Hills</option>
+        <option value="121">Vineyard</option>
+        <option value="65">Vineyard Northwest</option>
+        <option value="142">Volker</option>
+        ---------------
+        <option value="143">Waldo Homes</option>
+        <option value="148">Ward Parkway</option>
+        <option value="144">Ward Parkway Plaza</option>
+        <option value="108">Washington Weatley</option>
+        <option value="109">Wendell Phillips</option>
+        <option value="97">West Blue Township</option>
+        <option value="98">West Blue Valley</option>
+        <option value="114">Western Hills</option>
+        <option value="110">West Plaza</option>
+        <option value="113">West Waldo</option>
+        <option value="99">Westside North</option>
+        <option value="100">Westside South</option>
+        <option value="66">Western 49-63</option>
+        <option value="67">Westwood</option>
+        <option value="73">White Oak</option>
+        <option value="79">Willow Creek</option>
+        <option value="80">Woodbridge</option>
+        <option value="101">Wornall Homestead</option>
+    </select>
+    </div>
+
+    <div class="sidebar_two">
+
+      <div id="graphic"> </div>
+
+    </div>
+    <p>Sources: Kansas City Police Department, Kansas City Star, KSHB41</p>
+    <p>Spatial resolution of data prior to 2015 is not as precise, areas have been generalized.</p>
+    <p>Neighborhood breakdown for Kansas City only</p>
+
+  </div>
+
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Homicide Trends: 1960-2016</h3>
+          <p>Like most metropolitan areas in the United States, Kansas City has seen waves of high homicide rates followed by relative lows. The War on drugs begining in the 1980s and spilling over into the early 90s saw some of the highest rates of homicide
+            in the city's history. Over the past twenty years homicides are on the decline. Unfortunately Kansas City is seeing a slower rate than most cities. At the moment 2017 is on track to pass the number of homicides from the previous year.</p>
+          <div id="trend"> <svg viewBox="0 0 1000 220" preserveAspectRatio="xMinYMin slice" width="50%" height="100%" style="width: 100%; overflow: hidden;"></svg></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-xs-6 borderR ninteensixties">
+          <p>1965-1975</p>
+          <h3><i>+60%</i></h3>
+          <p>Homicides increased significantly in this period, an average of 7.3% each year. The rate per 100,000 residents also doubled from 12.7 to 22.5.</p>
+        </div>
+        <div class="col-sm-3 col-xs-6 borderR ninteensixties borderL">
+          <p>1980s</p>
+          <h3><i>23.2</i></h3>
+          <p>per one hundred thousand</p>
+          <p>In the midst of the war on drugs Kansas City's homicide rates reflected the national trend. From this point onward homicides would be on the rise.</p>
+        </div>
+        <div class="col-sm-3 col-xs-6 borderR ninteensixties borderU">
+          <p>1990s</p>
+          <h3><i>35.2<i></h3>
+          <p>per one hundred thousand</p>
+          <p>Kansas City see's it's highest homicide rate ever in 1993. Police agencies esperiment with community policing and broken windows theory.</p>
+        </div>
+        <div class="col-sm-3 col-xs-6 ninteensixties borderLU">
+          <p>2000s to Present</p>
+          <h3><i>-10%</i></h3>
+          <p>Homicide experienced a downward trend between 1990 and 2015. The past 2 years have seen spikes with 2017 seeing 69 homicides in the first few months.</p>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-3 victsex">
+          <h3>Victims Sex, Age, and Race</h3>
+          <p>The demographics of victims is highly skewed towards black males between the ages of 15 and 34. Women overall have hitorically low numbers but have been frequent over the past 20 years.</p>
+        </div>
+        <div class="col-md-9">
+
+          <div id="agesex"><svg viewBox="0 0 660 400" preserveAspectRatio="xMinYMin slice" width="50%" height="100%" style="width: 100%; overflow: hidden;"></svg></div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-md-push-8">
+          <h3>Gun Use</h3>
+          <p>The vast of majority of homicicdes are unsurprisingly committed with a firearm. Mid summer is consists of the highest number of shootings throughout the year in gang territory. Though the range of shooting vivtims range from drive by shootings
+            to shootouts.</p>
+        </div>
+        <div class="col-md-8 col-md-pull-4">
+          <svg viewBox="0 0 600 400" preserveAspectRatio="xMinYMin slice" width="50%" height="100%" style="width: 100%; overflow: hidden;">
+    <svg width="600" height="400">
+      <g>
+        <circle class="circOne" cx="200" cy="200" r="137.2"></circle>  <text x="200" y="45%" text-anchor="middle" fill="rgb(240,240,240)" stroke-width="0.8px" font-size="35">Guns Used</text><text  x="200" y="55%" text-anchor="middle" fill="rgb(240,240,240)" stroke-width="2px" font-size="35" font-family="Abril Fatface">385</text></g></svg>
+          <svg width="600" height="400">
+            <g>
+              <circle class="circTwo" cx="500" cy="200" r="64.4"></circle> <text x="500" y="45%" text-anchor="middle" fill="rgb(0,0,0)" stroke-width="0.8px" font-size="25">Other</text><text x="500" y="55%" text-anchor="middle" fill="rgb(0,0,0)" stroke-width="2px" font-size="35" font-family="Abril Fatface">84</text></g>
+            </svg>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+    <script src="js/KansasCityMap.js"></script>
+
+</body>
+</html>

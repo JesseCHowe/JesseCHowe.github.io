@@ -1,0 +1,220 @@
+@font-face { font-family: Flat Font; font-weight: 300; src: url("http://www.flatlandkc.org/assets/themes/STORYLAB-BS3/css/fonts/ProximaNova Regular.otf") format("opentype"); } @font-face { font-family: FlatFont; font-weight: 400; src: url("fonts/ProximaNova Semibold.otf") format("opentype"); } @font-face { font-family: FlatFont; font-weight: 700; src: url("http://www.flatlandkc.org/assets/themes/STORYLAB-BS3/css/ fonts/ProximaNova Regular.otf") format("opentype"); } @font-face { font-family: FlatFont; font-weight: 900; src: url("fonts/ProximaNova Extrabld.otf") format("opentype"); }
+a, a:visited, a:active {
+  color: #444;
+}
+h1, h2{
+  margin-top: 50px;
+  text-align: center;
+  font-family: Flat Font;
+}
+.container {
+    font-family: Flat Font;
+  max-width: 1000px;
+  margin: auto;
+  font-size: 1em;
+}
+
+.button {
+  min-width: 130px;
+  padding: 4px 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+}
+
+.button.active {
+  background: #000;
+  color: #fff;
+}
+
+.allnum{
+  font-size: 36px;
+    font-weight:bold;
+}
+#vis {
+
+
+  clear: both;
+  margin-bottom: 10px;
+}
+.union{
+  font-size: 30px;
+
+}
+.uniondesc{
+  width: 20px;
+}
+#toolbar {
+  margin-top: 10px;
+    text-align:center;
+    width:100%;
+  overflow: hidden;
+
+}
+.state{
+
+  font-size: 18px;
+}
+#toolbar a{
+
+ margin:1px;
+    width:10%;
+    text-align:center;
+    border: 1px solid gray;
+    display:inline-block;
+}
+.toolbarWrapper{
+    margin: auto;
+       width: 100%;
+}
+ .allEnforce, .category {
+  font-size: 14px;
+  fill: #000;
+  cursor: default;
+}
+.tooltip p{
+   text-align: center;
+}
+.year{
+  font-size: 30px;
+}
+.tooltip {
+	position: absolute;
+	top: 100px;
+	left: -200px;
+
+	border-radius: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #fff;
+	opacity: .9;
+  color: black;
+	padding: 10px;
+	width: 30%;
+  max-width: 250px;
+	font-size: 12px;
+	z-index: 10;
+}
+.tooltip .title {
+	font-size: 13px;
+}
+.half p{
+  font-size: 10px;
+}
+@media screen and (max-width: 480px) {
+    .tooltip p{
+        font-size: 10px;
+      text-align: center;
+    }
+  .button{
+    min-width:90px;
+  }
+  .tooltip{
+    font-size: 4px;
+  }
+  .amount{
+    font-size: 12px;
+  }
+  .half p{
+   font-size: 1.4em;
+}
+  h1{
+    font-size: 1.2em;
+  }
+  .button{
+    font-size: 0.6em;
+  }
+  .container {
+    font-size: 0.6em;
+  }
+  .tooltip .name {
+    font-size: 1.5em;
+  }
+}
+.tooltip .title {
+	font-size: 8px;
+}
+.half{
+  width: 50%;
+float: left;
+
+}
+
+.tooltip .name {
+  font-weight:bold;
+  text-align: center;
+   border-bottom: 1px solid #999;
+  padding: 0px;
+
+}
+.tooltip .amount {
+  font-weight:bold;
+  text-align: center;
+  padding: none;
+ margin-top: 0px;
+  font-size: 2em;
+}
+.tooltip .value{
+  width: 50%;
+  height: 50px;
+  background: red;
+  font-size: 1.5em;
+}
+.footer {
+  text-align: center;
+}
+.emphasisnum{
+  fill:#999;
+  font-size: 30px;
+}
+.statenum{
+  fill:#999;
+  font-size: 24px;
+}
+.unionnum{
+  fill:#999;
+  font-size: 24px;
+}
+  .safetynum{
+    fill:#999;
+  font-size: 24px;
+  }
+.categorynum{
+  fill:#999;
+  font-size: 18px;
+}
+
+  .container p{
+   text-align: center;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  .obama svg{
+    overflow: visible;
+    max-width: 300px;
+  }
+
+.guide{
+  margin: auto;
+  display: block;
+  left: auto;
+  right: auto;
+      width: 55px;
+}
+.guide svg{
+opacity: 0.7;
+}
+
+.gray{
+   margin: auto;
+  display: block;
+  left: auto;
+  right: auto;
+  width: 25px;
+}
+
+.svgcontainer{
+  max-width: 300px;
+}

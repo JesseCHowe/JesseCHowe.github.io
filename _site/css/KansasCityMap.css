@@ -1,0 +1,751 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e1e1e;
+  overflow-x: hidden;
+}
+#legendChart{
+  height: 50px;
+  padding-top: 0px;
+}
+#legendChart p{
+  margin-left: 20px;
+  color: #fff;
+  margin-bottom: -14px;
+  margin-top: 24px;
+}
+.label{
+  fill: #fff;
+}
+#graphic{
+
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#graphic svg{
+  height: 300px;
+}
+.N{
+  visibility: hidden;
+}
+
+.ninteensixties h3{
+	font-family: "Abril Fatface";
+	font-size: 47px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+  color: rgb(150,150,150);
+}
+.borderR{
+      border-style: solid;
+    border-width: 0px 1px 0px 0px;
+  height: 165px;
+  border-color: gray;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+.borderR{
+      border-style: solid;
+    border-width: 0px 0px 0px 0px;
+height: auto;
+  border-color: gray;
+  padding-bottom: 0px;
+}
+  .borderL{
+       border-width: 0px 0px 0px 1px;
+    border-color: rgb(200,200,200);
+    border-style: solid;
+  }
+  .borderU{
+    border-width: 1px 0px 0px 0px;
+    border-color: rgb(200,200,200);
+    border-style: solid;
+  }
+  .borderLU{
+      border-width: 1px 0px 0px 1px;
+    border-color: rgb(200,200,200);
+    border-style: solid;
+  }
+}
+a.mapboxgl-ctrl-logo {
+  width: 0px !important;
+}
+    .mapboxgl-
+up {
+        max-width: 600px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      z-index: 2000;
+      color: #fff;
+    }
+.mapboxgl-popup-content{
+  background: #1e1e1e !important;
+}
+.mapboxgl-popup-tip{
+
+}
+.mapboxgl-popup-content .container{
+  width: 290px;
+  color: #fff;
+   z-index: 2000;
+}
+.bord{
+ border-style: solid;
+    border-color: #333;
+
+  border-width: 1px 1px 1px 1px;
+
+}
+.sectionTwo{
+  width: 50px;
+  float: left;
+    border-width: 1px 1px 1px 1px;
+}
+#title {
+  margin: 0;
+  padding: 0;
+  background: #1e1e1e;
+  top: 0px;
+  z-index: 20;
+    padding-left: 25px;
+  padding-right: 15px;
+  width: 100%;
+
+
+
+  position: relative;
+}
+
+#title h1 {
+  color: #eeeeee;
+}
+@media screen and (max-width: 767px) {
+  #title h1{
+    font-size:20px;
+  }
+  #legendChart p{
+  margin-top: 0px;
+}
+  #legendChart{
+    height: 80px;
+  }
+}
+#map {
+  /*position: absolute;*/
+  /*top: 0;*/
+  bootm: 0;
+  height: 600px;
+  width: 100%;
+}
+
+.map-container {
+  height: 600px;
+}
+.sidebar {
+  left: 0;
+  top: 108px;
+  position: absolute;
+  height: 599px;
+  width: 350px;
+background: rgba(10,10,10,0.8);
+  z-index: 20;
+}
+@media screen and (max-width:900px){
+  .sidebar{
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 1600px){
+  .map-container,.sidebar{
+
+    height: 40vw;
+  }
+  #map{
+    height: 40vw;
+  }
+}
+@media screen and (max-width: 760px){
+  #map{
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px){
+
+}
+@media screen and (max-width: 480px) {
+    #map {
+        height: 300px;
+        width: 100%;
+    }
+  .map-container{
+    height: 300px;
+  }
+}
+.sidebar p{
+      position: relative;
+    float: left;
+    padding-left: 10px;
+  color: #fff;
+}
+.content {
+
+  background: #eee;
+}
+
+
+@media screen and (max-width: 765px) {
+  .sidebar{
+    width: 100%;
+
+    position: relative;
+    top: 0;
+  }
+}
+
+/*Sidebar Menu*/
+
+ul#menu {
+  top: 0;
+  left: 0;
+  height: 30vh;
+  margin: 0;
+  padding: 0 10px;
+  color: #eee;
+}
+.sidebar_one{
+  padding-top: 30px;
+}
+ul#menu > li {
+  float: left;
+  width: 100%;
+  list-style-type: none;
+  position: relative;
+}
+
+11qqqqa2z label {
+  position: relative;
+  display: block;
+  padding: 0 18px 0 12px;
+  line-height: 3em;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 5px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid rgba(255, 255, 255, .5);
+  border-bottom: 0 solid rgba(255, 255, 255, .5);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  transition: border-bottom .1s, border-top .1s .1s;
+}
+
+label:hover,
+input:checked ~ label {
+  background: rgba(0, 0, 0, .3);
+}
+
+input:checked ~ label:after {
+  border-top: 0 solid rgba(255, 255, 255, .5);
+  border-bottom: 4px solid rgba(255, 255, 255, .5);
+  transition: border-top .1s, border-bottom .1s .1s;
+}
+
+
+/*hide the inputs*/
+
+input {
+  display: none
+}
+
+
+/*show the second levele menu of the selected voice*/
+
+input:checked ~ ul.submenu {
+  max-height: 600px;
+  transition: max-height 0.5s ease-in;
+}
+
+
+/*style for the second level menu*/
+
+ul.submenu,
+
+/*style for the second level menu*/
+
+ul.submenu2 {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  background: #444;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .3);
+  transition: max-height 0.5s ease-out;
+  position: absolute;
+  min-width: 100%;
+  z-index: 30;
+}
+
+ul.submenu li a {
+  display: block;
+  padding: 12px;
+  color: #ddd;
+  text-decoration: none;
+  box-shadow: 0 -1px rgba(0, 0, 0, .5) inset;
+  transition: background .3s;
+  white-space: nowrap;
+  background: #000;
+}
+
+ul.submenu li a:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+
+/*D3*/
+
+#d3_linechart {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50vh;
+  z-index: 100;
+}
+
+#lc_container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+path {
+  stroke: #fff;
+  stroke-width: 6;
+  fill: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+#legendContainer {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  overflow: auto;
+  height: 490px;
+  width: 110px;
+}
+
+#legend {
+  width: 90px;
+  height: 200px;
+}
+
+.legend {
+  font-size: 12px;
+  font-weight: normal;
+  text-anchor: left;
+  fill: #000;
+}
+
+.legendcheckbox {
+  cursor: pointer;
+}
+
+#showAll {
+  position: absolute;
+  top: 600px;
+  left: 880px;
+}
+
+#clearAll {
+  position: absolute;
+  top: 600px;
+  left: 950px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: #999;
+  border: 0;
+  color: #fff;
+}
+
+#inds {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#unclustured-points {
+  [fscale=0] {
+    circle-radius: 5
+  }
+}
+
+
+/*D3 Chart*/
+
+.plot {
+  fill: #fff;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #AFBABF;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-family: SourceSansPro-Bold;
+  font-size: 14px;
+  fill: #AFBABF;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis path {
+  display: none;
+}
+
+.line,
+#Line1,
+#Line2,
+#Line3,
+#Line4 {
+  fill: none;
+  stroke: #8073ac;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.hed {
+  font-family: SourceSansPro-Bold;
+  font-size: 24pt;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.dek {
+  font-family: SourceSansPro-Light;
+  font-size: 12pt;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.menuchoice {
+  font-family: SourceSansPro-Light;
+  font-size: 10pt;
+  margin-bottom: 0px;
+  fill: #231F20;
+}
+
+.legend {
+  font-family: SourceSansPro-Light;
+  font-size: 10pt;
+  margin-bottom: 0px;
+  fill: none;
+}
+
+.legend-off {
+  font-family: SourceSansPro-Light;
+  font-size: 10pt;
+  margin-bottom: 0px;
+  fill: none;
+}
+
+.legend-select {
+  font-family: SourceSansPro-Bold;
+  font-size: 10pt;
+  margin-bottom: 0px;
+  fill: none;
+}
+
+.tip1 {
+  font-family: SourceSansPro-Bold;
+  font-size: 14pt;
+  text-align: center;
+  margin-bottom: -12px;
+  margin-top: 0px;
+}
+
+.tip2 {
+  font-family: SourceSansPro-ExtraLight;
+  font-size: 10pt;
+  text-align: center;
+  margin-bottom: -12px;
+}
+
+.tip3 {
+  font-family: SourceSansPro-ExtraLight;
+  font-size: 10pt;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+@font-face {
+  font-family: 'SourceSansPro-ExtraLight';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGC-IiwWNzQT_LXAtr-Ee9Pw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGIqjGYJUyOXcBwUQbRaNH6c.woff) format('woff');
+}
+
+.tipsy {
+  font-family: "Source Sans Pro";
+  font-size: 10px;
+  position: absolute;
+  padding: 5px;
+  z-index: 100000;
+}
+
+.tipsy-inner {
+  background-color: rgb(240,240,240);
+  color: #000;
+  max-width: 200px;
+  padding: 0;
+  text-align: left;
+  padding: 10px;
+}
+
+
+/* Rounded corners */
+
+.tipsy-inner {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+
+/* Uncomment for shadow */
+
+
+/*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+
+.tipsy-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: 5px dashed #000;
+}
+
+
+/* Rules to colour arrows */
+
+.tipsy-arrow-n {
+  border-bottom-color: #000;
+}
+
+.tipsy-arrow-s {
+  border-top-color: #000;
+}
+
+.tipsy-arrow-e {
+  border-left-color: #FFF;
+}
+
+.tipsy-arrow-w {
+  border-right-color: #000;
+}
+
+.tipsy-n .tipsy-arrow {
+  top: 0px;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.tipsy-nw .tipsy-arrow {
+  top: 0;
+  left: 10px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.tipsy-ne .tipsy-arrow {
+  top: 0;
+  right: 10px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.tipsy-s .tipsy-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.tipsy-sw .tipsy-arrow {
+  bottom: 0;
+  left: 10px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.tipsy-se .tipsy-arrow {
+  bottom: 0;
+  right: 10px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.tipsy-e .tipsy-arrow {
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+  border-left-style: solid;
+  border-right: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tipsy-w .tipsy-arrow {
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+  border-right-style: solid;
+  border-left: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.gravity {
+  width: 100%;
+  margin: 5px 0;
+  border-spacing: 5px;
+}
+
+.gravity td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px 0;
+  background-color: #d0d0d0;
+  width: 33%;
+}
+
+.gravity a {}
+
+.gravity a:hover {
+  color: #505050;
+  background: none;
+}
+
+path.selected {
+  fill: #ff7409;
+}
+.victsex{
+ padding-top: 25px;
+}
+path{
+  stroke-width: 1;
+  fill: none;
+}
+.content .row{
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.red{
+  width: 600px;
+  height: 100%;
+  background: #000;
+}
+
+body { font: 12px Arial;}
+
+path {
+	stroke: #8073ac;
+	stroke-width: 2;
+	fill: none;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: grey;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+.circOne{
+  fill: #4d3765;
+}
+.circTwo{
+  fill: #939396;
+}
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 0px;
+  font: 12px sans-serif;
+  background: rgba(0,0,0,0.9);
+  border: 1px;
+   border-style: solid;
+    border-color: #fff;
+  border-radius: 1px;
+ /*  pointer-events: none;	This line needs to be removed */
+	color: #fff;
+}
+
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path {
+      stroke-width: 0;
+}
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path {
+      stroke-width: 0;
+}
