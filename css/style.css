@@ -244,3 +244,6 @@ input[type="submit"] {
     font-variant: small-caps;
     text-decoration:none;
 }
+.fa:hover {
+    text-decoration:none;
+}
