@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Page</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+  <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:400,700" rel="stylesheet">
+
+<div class="aboutMe">
+  <p>I'm <span class="name">Jesse Howe</span><br/> an information designer based out of Kansas City, Missouri. I create animations for <a href="https://fivethirtyeight.com/" target="_blank"><span class="test fivethirtyeight">FiveThirtyEight</span></a>, interactive visualizations for <a href="https://oklahomawatch.org/" target="_blank"><span class="test oklahomawatch">Oklahoma Watch</span></a>, and worked on various data journalism projects for <a href="https://www.flatlandkc.org/" target="_blank"><span class="test flatland">Flatland</span></a>.</p>
+  <p>shoot me an email at <strong>jchowe93[at]gmail[dot]com</strong></p>
+  <p>@CraytonHowe</p>
+ </div>
+
+<div class ="toggle">
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('interactive')"> Interatives</button>
+  <button class="btn" onclick="filterSelection('video')"> Animation</button>
+</div>
+</div>
+
+<section class="container">
+  
+<!--Oklahoma Vaccination Rates-->     
+<div class="row project filterDiv interactive">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://oklahomawatch.org/2019/05/20/vaccination-rates-by-school-county/" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://oklahomawatch.org/wp-content/uploads/2019/05/Vaccine-Screen-Shot.png" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://oklahomawatch.org/2019/05/20/vaccination-rates-by-school-county/" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">Oklahoma's Elementary<br data-owner="balance-text">Vaccination Rates</h4>
+        </a>
+    <h5 class="g-date">Oklahoma Watch</h5>
+    <p class="g-body">Many Oklahoma schools report required vaccination rates for kindergarteners at 95% or above, according to a 2017-18 survey. But some schools have rates well below 80% and rates of vaccination exemptions above 10% or even 20%. Find out the rates for your school and county.</p>
+  </div>
+</div>
+  </div>
+
+<!--Scripps Spelling Bee-->   
+<div class="row project filterDiv video">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://fivethirtyeight.com/features/5-tips-for-going-far-in-the-spelling-bee/" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://fivethirtyeight.com/wp-content/uploads/2019/05/GettyImages-965034234_4x3.jpg?w=300" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://fivethirtyeight.com/features/5-tips-for-going-far-in-the-spelling-bee/" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">How To Go Far In The Spelling Bee</h4>
+        </a>
+    <h5 class="g-date">FiveThirtyEight</h5>
+    <p class="g-body">The Scripps National Spelling Bee returned on Monday with more than 560 spellers. What kinds of words tend to trip spellers up? What are the common pitfalls to look out for?</p>
+  </div>
+</div>
+  </div>
+
+<!--WRI-->  
+<div class="row project filterDiv interactive">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://jessechowe.github.io/WRI_BubbleChart_Competition/" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://raw.githubusercontent.com/JesseCHowe/JesseCHowe.github.io/master/images/WRI.png" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://jessechowe.github.io/WRI_BubbleChart_Competition/" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">WRI X Viz for Social Good Award:<br data-owner="balance-text">Emissions Visualization</h4>
+        </a>
+    <h5 class="g-date">World Resources Institute</h5>
+    <p class="g-body">Viz for Social Good helps mission-driven organizations to promote social good and understand their own data through beautiful and informative data visualization. This visualization was selected as a winner for the visualizing emissions project for the World Resources Institute.</p>
+  </div>
+</div>
+  </div>
+  
+<!--OSHA-->  
+<div class="row project filterDiv interactive">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://jessechowe.github.io/OSHAsLostList.html" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://raw.githubusercontent.com/JesseCHowe/JesseCHowe.github.io/master/images/OSHA.jpg" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://jessechowe.github.io/OSHAsLostList.html" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">OSHA's Lost List</h4>
+        </a>
+    <h5 class="g-date">Personal Project</h5>
+    <p class="g-body">Since January 18th OSHA hasn't released a single press releases on it's website, but thanks to Jordan Barab, a former OSHA employee, a list is being maintained on his personal blog. Inspired by a news story posted on Reveal.</p>
+  </div>
+</div>
+  </div>
+  
+<!--Women in Legislature-->  
+<div class="row project filterDiv interactive">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://codepen.io/jchowe/full/PrzKmw" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://raw.githubusercontent.com/JesseCHowe/JesseCHowe.github.io/master/images/Women%20in%20Legislature.png" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://codepen.io/jchowe/full/PrzKmw" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">Women In State Legislature</h4>
+        </a>
+    <h5 class="g-date">Personal Project</h5>
+    <p class="g-body">Since 1969, the number of women serving in state legislatures has increased substantially from several hundred to 1,814 (24.6 percent of the 7383 seats) as of 2015. Approximately 60 percent of female legislators are Democrats, but Republican women have been closing the gap in recent elections.</p>
+  </div>
+</div>
+  </div>
+
+<!--Disney-->  
+<div class="row project filterDiv interactive">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://jessechowe.github.io/Top-Grossing-Disney-Movies/" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://raw.githubusercontent.com/JesseCHowe/Top-Grossing-Disney-Movies/master/Highest%20Grossing%20Disney%20Movies.png" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://jessechowe.github.io/Top-Grossing-Disney-Movies/" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">Top Grossing Disney Movies</h4>
+        </a>
+    <h5 class="g-date">Personal Project</h5>
+    <p class="g-body">Walt Disney Studios is responsible for some of the most iconic and popular movies to ever be created. We look back at the company’s highest-grossing flicks over the years.</p>
+  </div>
+</div>
+  </div>    
+
+<!--KC Homicide-->  
+<div class="row project filterDiv interactive">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://jessechowe.github.io/KansasCityHomicidesMap.html" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://jessechowe.github.io/images/KcHomicides.jpg" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://jessechowe.github.io/KansasCityHomicidesMap.html" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">Kansas City Homicide Map</h4>
+        </a>
+    <h5 class="g-date">Personal Project</h5>
+    <p class="g-body">Personal project combining D3 visualizations with Mapbox. This map compiles all recorded homicides in the Kansas City Area since 2015, as well as non geographic data since 2009. This is an ongoing project.</p>
+  </div>
+</div>
+  </div> 
+
+<!--Kansas City's Vietnam-->   
+<div class="row project filterDiv video">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://www.youtube.com/watch?v=zVqpGmAKZ5g" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://raw.githubusercontent.com/JesseCHowe/JesseCHowe.github.io/master/images/vietnam.png" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://www.youtube.com/watch?v=zVqpGmAKZ5g" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">Kansas City's Vietnam</h4>
+        </a>
+    <h5 class="g-date">Flatland x KCPT</h5>
+    <p class="g-body">In preparation of the Ken Burns Vietnam War documentary. I collected historical census data and written reports of KIA soldiers to tell the story of what those years during the Vietnam war looked like in Kansas City.</p>
+  </div>
+</div>
+  </div>
+
+<!--Mouse Makes The Grade-->  
+<div class="row project filterDiv interactive">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://www.flatlandkc.org/arts-culture/mike-moustakas-breaks-royals-32-year-home-run-record/" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://raw.githubusercontent.com/JesseCHowe/JesseCHowe.github.io/master/images/moustakas.jpg" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://www.flatlandkc.org/arts-culture/mike-moustakas-breaks-royals-32-year-home-run-record/" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">Moose Makes The Grade</h4>
+        </a>
+    <h5 class="g-date">Flatland</h5>
+    <p class="g-body">Royals infielder Mike Moustakas beat the team’s 32-year home run record in a season with home run No. 37 on Sept. 20 against the Toronto Blue Jays. Steve Balboni previously held the title with 36 home runs in 1985.</p>
+  </div>
+</div>
+  </div> 
+
+<!--Food Deserts-->  
+<div class="row project filterDiv">
+<div class="col-md-7">
+          <div class="g-image-container">
+                <a href="https://www.flatlandkc.org/news-issues/health/school-nutrition-follow/" target="_blank"><img class="g-thumb g-lazy ll-init ll-loadstarted ll-loaded" src="https://s3.amazonaws.com/cdn.takenotekc.org/images/wshestudentpercent.jpg" alt=""></a>
+              </div>
+        </div>
+<div class="col-md-5">
+  <div class="title">
+    <a href="https://www.flatlandkc.org/news-issues/health/school-nutrition-follow/" target="_blank">
+          <h4 class="g-headline" style="white-space: normal; float: none; display: block; position: static;">Feeding the Mind</h4>
+        </a>
+    <h5 class="g-date">Flatland x Take Note</h5>
+    <p class="g-body">Education and nutrition go hand in hand. If a child is hungry or malnourished, it’s a good bet they can’t concentrate on their studies. That premise underpins the federal school-lunch and school-breakfast programs, which provide free- or reduced-price meals to millions of at-risk students each year.</p>
+  </div>
+</div>
+  </div>   
+</section>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
