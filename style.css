@@ -155,6 +155,9 @@ body {
   }
 }
 
+a{
+color: #DE5A51;  
+}
 a:hover {
 color: #DE5A51;
 }
