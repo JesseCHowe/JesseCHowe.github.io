@@ -9,8 +9,16 @@ const addStory = (d) => {
   <div class="hed">
 
     <div>
-      <h3>${d.title}</h3>
+      <a href="${d.link}" target="_blank" rel="no-referrer">
+      ${d.title}
+      </a>
       <p>${d.desc}</p>
+
+      ${
+        d.link.length
+          ? `<a class="to-story" href="${d.link}" target="_blank" rel="no-referrer">Visit project</a>`
+          : ""
+      }
       
       <div>
         <div class="role">
@@ -30,10 +38,10 @@ const addStory = (d) => {
     
     <div class="btns">
       <button class="prev">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M10 22L0 12L10 2l1.775 1.775L3.55 12l8.225 8.225z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 22L0 12L10 2l1.775 1.775L3.55 12l8.225 8.225z"/></svg>
       </button>
       <button class="next">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"/></svg>
       </button>
     </div>
   </div>

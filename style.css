@@ -15,11 +15,23 @@ body {
   align-items: flex-end;
   margin-bottom: 10px;
 }
-.hed h3 {
+.hed a {
   margin: 0;
+  margin-bottom: 8px;
   font-size: 36px;
   line-height: 1;
   font-family: 'Noto Serif', serif;
+  color: #000;
+  text-decoration: none;
+}
+.hed a.to-story {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+  color: #698d6e;
+  display: block;
+  text-decoration: underline;
 }
 .hed p {
   max-width: 500px;
@@ -89,6 +101,9 @@ position: relative;
 button svg {
   width: 30px;
   height: 30px;
+}
+button svg path {
+  fill: #000;
 }
 @media(max-width: 700px) {
   button svg {

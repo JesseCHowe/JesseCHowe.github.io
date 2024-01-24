@@ -1,6 +1,7 @@
 const stories_data = [
   {
     title: "Great Chicago Fire",
+    link: "https://graphics.suntimes.com/great-chicago-fire/",
     id: "great-chicago-fire",
     desc: "A scrollytelling story showcasing the path of destruction and major buildings affected by the Great Chicago Fire. Now integrated into Chicago school curriculums.",
     tools: ["QGIS", "Javascript", "CSS", "D3", "Illustrator"],
@@ -28,6 +29,7 @@ const stories_data = [
   },
   {
     title: "Oklahoma Vaccination Rates",
+    link: "https://oklahomawatch.org/2019/05/20/vaccination-rates-by-school-county/",
     id: "ok-vax",
     desc: "A data visualization Investigating vaccination rates in Oklahoma schools.",
     tools: ["D3", "Javascript", "CSS"],
@@ -55,6 +57,7 @@ const stories_data = [
   },
   {
     title: "Extremism In The Ranks",
+    link: "https://graphics.suntimes.com/extremism-ranks/2023/oathkeepers-investigation-chicago-police-extremism-insurrection/",
     id: "extremism-ranks",
     desc: "An investigative project by the Sun-Times, WBEZ, and the Organized Crime and Corruption Reporting Project, exploring records of Chicago cops in an anti-government group.",
     tools: ["Svelte", "D3", "Javascript", "CSS"],
@@ -84,6 +87,7 @@ const stories_data = [
   },
   {
     title: "Chicago Election Suite",
+    link: "https://elections.suntimes.com/",
     id: "chicago-election-suite",
     desc: "Collection of projects developed for the Chicago Municipal Election.",
     tools: ["S3", "D3", "Javascript", "CSS"],
@@ -121,6 +125,7 @@ const stories_data = [
   },
   {
     title: "Electoral Money",
+    link: "",
     id: "electoral-money",
     desc: "Collection and visualization of publicly available data filed by nine mayoral campaigns with the Illinois State Board of Elections.",
     tools: ["D3", "Javascript", "CSS", "Illustrator", "ai2html"],
@@ -142,6 +147,7 @@ const stories_data = [
   },
   {
     title: "WNBA Tracker 2024",
+    link: "https://chicago.suntimes.com/graphics/chicago-sky-and-wnba/2024/free-agency-tracker/",
     id: "wnba-2024",
     desc: "Live tool tracking trades and offers during the WNBA free agency season.",
     tools: ["S3", "Svelte", "D3", "Javascript", "CSS"],
